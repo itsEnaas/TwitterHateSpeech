@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Domain Adaptation for Hate Speech Detection using LSTM</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div style="width: 100%; margin: auto; text-align: center">
+    <img src="{{ url_for('static', filename='FinalYearProjectLogo.png')}}" style ="max-width: 400px; margin-top: 20px; margin-bottom: 20px">
+    {% if hashtag %}
+    <p style="font-style:italic; size:100px">{{ '#' + hashtag }}</p>
+    {% endif %}
+
+    <h3 style="margin-top: 30px; margin-bottom: 30px">
+         {% if accuracy %}
+        <b>Accuracy:
+            {{accuracy}}%
+        </b>
+        {% endif %}
+    </h3>
+     <a href="/">Back to Homepage</a>
+</div>
+</body>
+
+</html>
